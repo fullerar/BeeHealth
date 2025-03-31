@@ -29,3 +29,7 @@ for epoch in range(args.epochs):
         optimizer.step()
         total_loss += loss.item()
     print(f"Epoch [{epoch+1}/{args.epochs}], Loss: {total_loss:.4f}")
+
+
+torch.save(model.state_dict(), 'model.pth')
+print("✅ Model saved to model.pth")
